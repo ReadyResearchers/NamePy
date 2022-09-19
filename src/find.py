@@ -64,5 +64,6 @@ def var_length(path:str):
 
 # (AssignTarget(target=Name(value='variable01',lpar=[],rpar=[],),whitespace_before_equal=SimpleWhitespace(value=' ',),whitespace_after_equal=SimpleWhitespace(value=' ',),),)\
 
+
 # To find instances of variables, create dict of all variable names, create frequency table. Key is name of variable, value contains length of variable, how many times it was found, etc. Should do with object oriented.
 # For instances where same variables are called in diff functions, do I care about individual functions, whole file...choose what i want ot measure.
