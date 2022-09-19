@@ -8,7 +8,7 @@ In progress
 
 ## Features
 
-There are two functioning features that lay some of the framework for the software tool. The first feature counts all assignments statements in the specified file(s). The second feature finds the length of each assignment statement tuple. As one would expect, the output for each statement is usually 1. For the feature in mind to be completed, the tuple needs to be separated by characters in order to find the length of the variables. Many other features will be implemented as the project continues.
+There are two functioning features that lay some of the framework for the software tool. The first feature counts all assignments statements in the specified file(s). The second feature finds the length of each assignment statement tuple. In progress
 
 ## Installation requirements
 
