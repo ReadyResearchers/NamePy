@@ -1,3 +1,3 @@
-from .generate_trees import *
-from .find import *
-from .CLI import *
+"""standard init file."""
+
+__version__ = "0.1.0"

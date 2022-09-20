@@ -1,7 +1,7 @@
 """Docstring here."""
 import typer
-# from src 
-import find
+# from src
+from namepy import find
 
 app = typer.Typer(
     help=("Description here.")

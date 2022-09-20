@@ -3,8 +3,8 @@
 from typing import Dict
 import libcst.matchers as match
 import libcst as cst
-# from src 
-import generate_trees as generator
+# from src
+from namepy import generate_trees as generator
 
 def generate_cast_single_file(path):
     """Generate a dictionary of a single file and its CAST.
@@ -67,3 +67,4 @@ def var_length(path:str):
 
 # To find instances of variables, create dict of all variable names, create frequency table. Key is name of variable, value contains length of variable, how many times it was found, etc. Should do with object oriented.
 # For instances where same variables are called in diff functions, do I care about individual functions, whole file...choose what i want ot measure.
+
