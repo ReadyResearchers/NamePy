@@ -1,22 +1,16 @@
-name: Pylint
+name: Lint
 
 on: [push]
 
 jobs:
-  build:
-
+   lint:
+    name: Lint
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.8
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pylint
-    - name: Analysing the code with pylint
-      run: |
-        find . -name '*.py' -exec pylint {} \;
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Python 3.9.6
+        uses: actions/setup-python@v2
+        id: setup-python
+        with:
+          python-version: 3.9.6
