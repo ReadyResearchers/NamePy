@@ -41,6 +41,9 @@ jobs:
         id: setup-python
         with:
           python-version: 3.9.6
+      - name: Install typer
+        if: always()
+        run: pip install typer
       - name: Install pytest
         if: always()
         run: pip install pytest
