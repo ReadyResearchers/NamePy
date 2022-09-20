@@ -20,9 +20,7 @@ jobs:
       - name: Install typer
         if: always()
         run: pip install typer
-      - name: Install pytest
-        if: always()
-        run: pip install pytest
+
   test:
     name: Test
     runs-on: ubuntu-latest
@@ -34,6 +32,9 @@ jobs:
         id: setup-python
         with:
           python-version: 3.9.6
+      - name: Install pytest
+        if: always()
+        run: pip install pytest
       - name: Run test suite
         if: always()
         run: pytest tests/
