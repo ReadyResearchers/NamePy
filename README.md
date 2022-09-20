@@ -4,11 +4,11 @@
 
 ## Description
 
-In progress
+The full proposal for NamePy can be found [here](SeniorThesisProposal.pdf)
 
 ## Features
 
-There are two functioning features that lay some of the framework for the software tool. The first feature counts all assignments statements in the specified file(s). The second feature finds the length of each assignment statement tuple. In progress
+There are two functioning features that lay some of the framework for the software tool. The first feature counts all assignments statements in the specified file(s). The second feature finds the length of each assignment statement tuple. *In progress
 
 ## Installation requirements
 
