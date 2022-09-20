@@ -2,9 +2,7 @@
 
 # Thomas Antle
 
-## Description
-
-The full proposal for NamePy can be found [here](SeniorThesisProposal.pdf)
+## The full proposal for NamePy can be found [here](SeniorThesisProposal.pdf)
 
 ## Features
 
