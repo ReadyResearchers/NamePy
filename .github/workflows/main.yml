@@ -20,6 +20,10 @@ jobs:
       - name: Install typer
         if: always()
         run: pip install typer
+      - name: Run pylint
+        if: always()
+        run: pylint src/
+        run: pylint tests/
 
   test:
     name: Test
