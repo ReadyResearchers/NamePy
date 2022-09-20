@@ -1,7 +1,7 @@
 """This module tests the find module in NamePy."""
 
 import pytest
-from src import find
+from namepy import find
 
 def test_find_vars():
     """Check that assignment statement dictionary is outputted correctly."""

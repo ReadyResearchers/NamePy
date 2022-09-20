@@ -1,6 +1,6 @@
 """This module tests the generate_trees module in NamePy."""
 
-from src import generate_trees as generator
+from namepy import generate_trees as generator
 
 def test_find_python_files():
     """Test the ability of generator to find the python files in a directory."""

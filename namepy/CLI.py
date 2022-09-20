@@ -4,6 +4,7 @@ import typer
 from namepy import find
 
 app = typer.Typer(
+    name="namepy",
     help=("Description here.")
 )
 
