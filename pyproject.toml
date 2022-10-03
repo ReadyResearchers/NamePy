@@ -13,7 +13,6 @@ namepy = "namepy.CLI:app"
 python3 = "^3.10.6"
 typer = "^0.4"
 libcst = "^0.4"
-wrapt = "^1.14.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
