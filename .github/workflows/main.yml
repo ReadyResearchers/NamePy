@@ -14,21 +14,13 @@ jobs:
         id: setup-python
         with:
           python-version: 3.9.6
-      - name: Install libcst
+      - name: Setup poetry
+        uses: Gr1N/setup-poetry@v7
+      - name: Install dependencies
+        run: poetry install
+      - name: Run pylint
         if: always()
-        run: pip install libcst
-      - name: Install typer
-        if: always()
-        run: pip install typer
-      - name: Install pylint
-        if: always()
-        run: pip install pylint
-      - name: Run pylint on src directory
-        if: always()
-        run: pylint src/
-      - name: Run pylint on tests directory
-        if: always()
-        run: pylint tests/
+        run: poetry run task pylint
 
   test:
     name: Test
@@ -41,12 +33,10 @@ jobs:
         id: setup-python
         with:
           python-version: 3.9.6
-      - name: Install typer
-        if: always()
-        run: pip install typer
-      - name: Install pytest
-        if: always()
-        run: pip install pytest
+      - name: Setup poetry
+        uses: Gr1N/setup-poetry@v7
+      - name: Install dependencies
+        run: poetry install
       - name: Run test suite
         if: always()
-        run: pytest tests/
+        run: poetry run task test
