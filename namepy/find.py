@@ -68,3 +68,16 @@ def var_length(path:str):
 # To find instances of variables, create dict of all variable names, create frequency table. Key is name of variable, value contains length of variable, how many times it was found, etc. Should do with object oriented.
 # For instances where same variables are called in diff functions, do I care about individual functions, whole file...choose what i want ot measure.
 
+# Push dictionaries to big json file (or separate them to do categories)
+# Controller makes dictionary with all function names 
+# controller calls from FIND, pushes dicts to 
+# for dict, look at primary keys and call them headers...etc.
+# use viewer to look at dictionary, these keys are headers, these keys are blah
+# look into reflection: if(callable)
+
+# print(dir(namepy.find))
+
+# from vars class, only run things that are this kind of function
+# prefix all functions with _fxfind, _varfind, etc.
+# can find all functions prefixed with __blank
+# 
