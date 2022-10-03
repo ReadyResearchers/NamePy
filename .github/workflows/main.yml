@@ -18,6 +18,9 @@ jobs:
         uses: Gr1N/setup-poetry@v7
       - name: Install dependencies
         run: poetry install
+      - name: Install wrapt
+        if: always()
+        run: pip install wrapt
       - name: Run pylint
         if: always()
         run: poetry run task pylint
