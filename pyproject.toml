@@ -10,7 +10,7 @@ packages = [{include = "namepy"}]
 namepy = "namepy.CLI:app"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python3 = "^3.10.6"
 typer = "^0.4"
 libcst = "^0.4"
 wrapt = "^1.14.1"
