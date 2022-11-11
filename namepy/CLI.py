@@ -17,7 +17,15 @@ def find_vars(directory_path: str):
 @app.command()
 def id_length(directory_path: str):
     """Report any errors or warnings related to identifier lengths."""
-    find.identifier_length(directory_path)
+    find.variable_length(directory_path)
+    find.function_length(directory_path)
+    find.class_length(directory_path)
+    find.parameter_length(directory_path)
+
+@app.command()
+def var_length(directory_path: str):
+    """Report any errors or warnings related to identifier lengths."""
+    find.variable_length(directory_path)
 
 @app.command()
 def report(directory_path: str):
@@ -55,3 +63,28 @@ def find_classes():
 
 if __name__ == "__main__":
     app()
+
+
+def func(param1,param2,param3):
+    print("hello world")
+    my_var = 1
+    i = 9
+
+def another_func(param1,param2,param3):
+    print("hello world")
+    my_var = 1
+    # i is the number of watermelons
+    i = 9
+
+
+# We're only reading each file once, but when we reach certain nodes, we'll do a list of checks
+# List of checks include: [Length checker, part of speech, comment checker on the line before]
+# Implement a visitor
+# Implement the visit_<node> function for each check we need
+# Class names
+# Function names
+# Parameter Names
+# variable names
+
+
+# ?can you access a node parent from the node object?
