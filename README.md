@@ -1,4 +1,4 @@
-# NamePy: An Identifier-Focused Linter for Beginning Python Developers
+# NamePy: An Identifier-Focused Linter for Novice Python Developers
 
 ### Thomas Antle
 
