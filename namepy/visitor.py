@@ -238,9 +238,9 @@ class IdentifierVisitor(cst.CSTVisitor):
                 self.issue_frequency[("Param_No_Noun")] += 1
 
 
-# FILE_PATH = "test_files/basic_files/test_file.py"
+FILE_PATH = "test_files/basic_files/test_file.py"
 # FILE_PATH = "namepy/visitor.py"
-FILE_PATH = "test_files/gatorgrader_files/arguments.py"
+# FILE_PATH = "test_files/gatorgrader_files/arguments.py"
 with open(FILE_PATH, "r", encoding="utf-8") as infile:
     data = infile.read()
 wrapper = cst.metadata.MetadataWrapper(cst.parse_module(data))
