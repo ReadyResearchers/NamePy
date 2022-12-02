@@ -14,6 +14,8 @@ jobs:
         id: setup-python
         with:
           python-version: 3.9.6
+        env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
       - name: Setup poetry
         uses: Gr1N/setup-poetry@v7
       - name: Install dependencies
@@ -35,6 +37,8 @@ jobs:
         id: setup-python
         with:
           python-version: 3.9.6
+        env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
       - name: Setup poetry
         uses: Gr1N/setup-poetry@v7
       - name: Install dependencies
