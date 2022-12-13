@@ -21,7 +21,7 @@ jobs:
       - name: Install spacy en_core_web_sm
         run: poetry run python -m spacy download en_core_web_sm
       - name: Run NamePy
-        run: poetry run python namepy/visitor.py test-files/test_file.py
+        run: poetry run python namepy/visitor.py namepy/visitor.py
       # - name: Run pylint
       #   if: always()
       #   run: poetry run task pylint
