@@ -8,8 +8,6 @@ Programmatic identifiers are used by software developers to assign names to enti
 
 The full comprehensive article for NamePy can be found [here](SeniorThesis.pdf).
 
-### The following information is out of date and under construction:
-
 ## Installation requirements
 
 For local use, clone this repository. Once cloned, Poetry is used to install all of the required dependencies. The command to do so should be run in the NamePy directory:
