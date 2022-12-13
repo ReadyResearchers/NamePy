@@ -18,7 +18,7 @@ For local use, clone this repository. Once cloned, Poetry is used to install all
 poetry install
 ```
 
-## How to run tool
+## Running NamePy
 
 To run the tool, use the following command:
 
