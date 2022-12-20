@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   lint:
-    name: Lint
+    name: Run NamePy
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout repository
@@ -22,25 +22,3 @@ jobs:
         run: poetry run python -m spacy download en_core_web_sm
       - name: Run NamePy
         run: poetry run python namepy/visitor.py namepy/visitor.py
-      # - name: Run pylint
-      #   if: always()
-      #   run: poetry run task pylint
-
-  # test:
-  #   name: Test
-  #   runs-on: ubuntu-18.04
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v2
-  #     - name: Setup Python ${{ matrix.python-version }}
-  #       uses: actions/setup-python@v2
-  #       id: setup-python
-  #       with:
-  #         python-version: 3.9.6
-  #     - name: Setup poetry
-  #       uses: Gr1N/setup-poetry@v7
-  #     - name: Install dependencies
-  #       run: poetry install
-  #     - name: Run test suite
-  #       if: always()
-  #       run: poetry run task test

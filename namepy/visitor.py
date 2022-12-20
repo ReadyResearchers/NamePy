@@ -7,6 +7,7 @@ import sys
 import libcst as cst
 import spacy
 
+# spacy uses NLP (natural language processing)
 NLP = spacy.load("en_core_web_sm")
 
 
@@ -50,6 +51,7 @@ class IdentifierVisitor(cst.CSTVisitor):
             # Only look at Name type objects (no Attributes)
             if isinstance(assign_target, cst.Name):
                 lookup = assign_target.value
+                # pos is short for part-of-speech
                 pos = self.get_metadata(
                     cst.metadata.PositionProvider, target.target
                 ).start
@@ -99,6 +101,7 @@ class IdentifierVisitor(cst.CSTVisitor):
         """Visit all instances of function definitions."""
         function_docstring = node.get_docstring()
         lookup = node.name.value
+        # pos is short for part-of-speech
         pos = self.get_metadata(cst.metadata.PositionProvider, node.name).start
         line_num = pos.line
         column = pos.column
@@ -142,6 +145,7 @@ class IdentifierVisitor(cst.CSTVisitor):
         """Visit all instances of class definitions."""
         class_docstring = node.get_docstring()
         lookup = node.name.value
+        # pos is short for part-of-speech
         pos = self.get_metadata(cst.metadata.PositionProvider, node.name).start
         line_num = pos.line
         column = pos.column
@@ -152,6 +156,21 @@ class IdentifierVisitor(cst.CSTVisitor):
                 f"is of length {len(lookup)} -- Reduce length."
             )
             self.issue_frequency[("Class_Too_Long")] += 1
+        # try:
+        #     if (len(lookup)) >= 31:
+        #         print("Setting exit code...")
+        #         print(
+        #             f"{self.current_file_path}:{line_num}:{column}: Class '{lookup}' "
+        #             f"is of length {len(lookup)} -- Reduce length."
+        #         )
+        #         self.issue_frequency[("Class_Too_Long")] += 1
+        #         sys.exit(1)
+        # except SystemExit:
+        #     print("Caught SystemExit exception.")
+        #     # Catch the SystemExit exception and continue running the program
+        #     pass
+        # print("Exit code was not set.")
+
         if (len(lookup)) <= 3:
             if class_docstring and lookup in class_docstring:
                 return
@@ -190,6 +209,7 @@ class IdentifierVisitor(cst.CSTVisitor):
             return
         for param in node.params:
             lookup = param.name.value
+            # pos is short for part-of-speech
             pos = self.get_metadata(cst.metadata.PositionProvider, param).start
             line_num = pos.line
             column = pos.column
@@ -257,3 +277,14 @@ if os.path.exists(FILE_PATH):
     # print(identifier_report, issue_report)
 else:
     print("Error: File path invalid\n")
+
+# # Check the exit code
+# if hasattr(sys, "exitcode"):
+#     # Use the sys.exitcode attribute if it is available
+#     print(f"The exit code was: {sys.exitcode}")
+# elif hasattr(sys, "status"):
+#     # Use the os.WEXITSTATUS function to retrieve the exit code from the sys.status attribute
+#     exit_code = os.WEXITSTATUS(sys.status)
+#     print(f"The exit code was: {exit_code}")
+# else:
+#     print("The exit code was not set.")
